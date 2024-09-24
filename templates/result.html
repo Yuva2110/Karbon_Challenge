@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Model Results</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Financial Model Results</h1>
+        <div class="company-info">
+            <h2>Company Information</h2>
+            <p><strong>CIN:</strong> {{ company.cin }}</p>
+            <p><strong>Legal Name:</strong> {{ company.legal_name }}</p>
+            <p><strong>Registered Address:</strong> {{ company.registered_address.full_address }}</p>
+            <p><strong>Incorporation Date:</strong> {{ company.incorporation_date }}</p>
+        </div>
+
+        <div class="flags">
+            <h2>Flags</h2>
+            <p><strong>Total Revenue Flag:</strong> {{ flags.TOTAL_REVENUE_5CR_FLAG }}</p>
+            <p><strong>Borrowing to Revenue Flag:</strong> {{ flags.BORROWING_TO_REVENUE_FLAG }}</p>
+            <p><strong>ISCR Flag:</strong> {{ flags.ISCR_FLAG }}</p>
+        </div>
+
+        <div class="summary">
+            <h2>Summary</h2>
+            <p>{{ description.desc_thousand_char }}</p>
+        </div>
+
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
